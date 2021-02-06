@@ -14,13 +14,13 @@
 -has_many :prototypes
 
 ##prototypesテーブル
-| Columun     |   Type   | Options     |
-| ----------- | -------- | ----------- |
-| title       | string   | null: false |
-| catch_copy  | text     | null: false |
-| concept     | string   | null: false |
-| user        |references|             |
-| image       |          |             |
+| Columun     |   Type   | Options          |
+| ----------- | -------- | -----------      |
+| title       | string   | null: false      |
+| catch_copy  | text     | null: false      |
+| concept     | string   | null: false      |
+| user        |references|foreign_key: true |
+
  
  ###Association
 
@@ -28,11 +28,11 @@
 -has_many :comments
 
 commentsテーブル
-| Columun     |  Type    | Options     |
-| ----------- | -------- | ----------- |
-| text        | string   | null: false |
-| user        |references|             | 
-| prototypes  |references|             |
+| Columun     |  Type    | Options           |
+| ----------- | -------- | -----------       |
+| text        | string   | null: false       |
+| user        |references| foreign_key: true | 
+| prototypes  |references| foreign_key: true |
 
  ###Association
 
